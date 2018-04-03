@@ -1,17 +1,20 @@
-hrs_worked = input ("Enter hours:")
-rate_of_pay = input ("Enter rate:")
-h = float(hrs_worked)
-r = float(rate_of_pay)
+def normal_pay(h, r):
+    if h > 40:
+        return 40 * r
+    else:
+        return h * r
+
 
 def overtime_hrs(h):
-    return (h - 40)
+    if h > 40:
+        return h - 40
+    else:
+        return 0
 
-def computepay(h,r):
-    o = 0
-    if(overtime_hrs(h) > 0):
-        o = overtime_hrs(h) * (r * 1.5)
-    n = 40 * r
-    t = o + n
-	return t
 
-print (computepay(h,r))
+def overtime_pay(h, r):
+    return overtime_hrs(h) * (r * 1.5)
+
+
+def computepay(h, r):
+    return overtime_pay(h, r) + normal_pay(h,r)
