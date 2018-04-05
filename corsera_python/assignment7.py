@@ -7,7 +7,6 @@ while True:
 
     try:
         num = int(num)
-
         if largest is None:
             largest = num
 
