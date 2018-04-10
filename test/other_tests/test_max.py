@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.PythonMax import max
+from corsera_python.other.PythonMax import max
 
 
 class PythonMax(unittest.TestCase):

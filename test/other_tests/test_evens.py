@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.PythonEvens import evens
+from corsera_python.other.PythonEvens import evens
 
 class PythonEvens(unittest.TestCase):
 

@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.PythonAverage import avg2
+from corsera_python.other.PythonAverage import avg2
 
 class PythonAverage(unittest.TestCase):
 
