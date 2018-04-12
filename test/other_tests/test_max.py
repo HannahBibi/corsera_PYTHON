@@ -8,7 +8,7 @@ class PythonMax(unittest.TestCase):
         self.assertEqual(74, max ([3, 41, 27, 74, 15]))
 
     def test_empty(self):
-        self.assertEqual(0, max([]))
+        self.assertEqual(None, max([]))
 
 
 if __name__ == '  main  ':

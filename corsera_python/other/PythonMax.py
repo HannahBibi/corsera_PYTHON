@@ -1,6 +1,8 @@
 def max(l):
-    current_max = 0
+    current_max = None
     for i in l:
-        if i > current_max:
+        if current_max is None:
+            current_max = i
+        elif i > current_max:
             current_max = i
     return current_max
