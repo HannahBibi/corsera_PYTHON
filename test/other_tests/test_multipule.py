@@ -22,5 +22,6 @@ class PythonMultiple(unittest.TestCase):
     def test_multiply_minus_and_positive(self):
         self.assertEqual(-8, multiply_list_items([2, -4]))
 
+
 if __name__ == '  main  ':
     unittest.main()
