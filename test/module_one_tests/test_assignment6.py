@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module_one.week6assignment import normal_pay, overtime_hrs, overtime_pay, computepay
+from corsera_python.module1.week6assignment import normal_pay, overtime_hrs, overtime_pay, computepay
 
 
 class week6assignment(unittest.TestCase):

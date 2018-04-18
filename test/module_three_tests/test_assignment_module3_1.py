@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module_three.module_three_assignment1 import extract_sum
+from corsera_python.module3.module_three_assignment1 import extract_sum
 
 
 def get_file_path(fn):
@@ -7,7 +7,7 @@ def get_file_path(fn):
     return os.path.join(os.path.dirname(__file__), fn)
 
 
-class assignment1module2(unittest.TestCase):
+class Assignment1Module3(unittest.TestCase):
 
     def test_sum_42(self):
         regex_sum_42 = get_file_path('regex_sum_42.txt')

@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module_two.assignment8 import extract_float
+from corsera_python.module2.assignment8 import extract_float
 
 class assignmnt8(unittest.TestCase):
 
