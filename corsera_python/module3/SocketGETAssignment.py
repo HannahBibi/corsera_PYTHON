@@ -1,14 +1,15 @@
-import socket
+def mock_one(sock, host, port, url):
 
-mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect(('data.pr4e.org', 80))
-cmd = 'GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n'.encode()
-mysock.send(cmd)
+    sock.connect((host, port))
+    full_url = 'GET' + url + 'HTTP/1.0\r\n\r\n'
+    sock.send(full_url.encode())
 
-while True:
-    data = mysock.recv(20)
-    if (len(data) < 1):
-        break
-    print(data.decode(), end='')
+    data_str = ""
+    while True:
+        data = sock.recv(512)
+        if (len(data) < 1):
+            break
+        data_str = data_str + data.decode()
 
-mysock.close()
+    sock.close()
+    return data_str
