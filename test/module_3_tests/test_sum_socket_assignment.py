@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module3.SumSocketAssignment import running_count
+from corsera_python.module3.SumSocketAssignment import assignment1, assignment2
 
 def get_file_path(fn):
     import os
@@ -19,13 +19,24 @@ def strip_cr_lf(s): return s.replace("\n", "").replace("\r", "")
 class SumAssignment(unittest.TestCase):
 
     def test_given_sum(self):
-        r = running_count('http://py4e-data.dr-chuck.net/comments_42.html')
+        r = assignment1('http://py4e-data.dr-chuck.net/comments_42.html')
         print(r)
 
     def test_ending_in_23(self):
-        w = running_count('http://py4e-data.dr-chuck.net/comments_86513.html')
+        w = assignment1('http://py4e-data.dr-chuck.net/comments_86513.html')
         print(w)
 
+    def test_fikret(self):
+        rng = 4
+        pos = 2
+        actual = assignment2('http://py4e-data.dr-chuck.net/known_by_Fikret.html', rng, pos)
+        print(actual)
+
+    def test_kristofer(self):
+        rng = 7
+        pos = 17
+        actual = assignment2('http://py4e-data.dr-chuck.net/known_by_Kristofer.html', rng, pos)
+        print(actual)
 
 
 

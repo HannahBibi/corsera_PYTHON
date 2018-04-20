@@ -1,7 +1,7 @@
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 
-def running_count(url):
+def assignment1(url):
     html = urllib.request.urlopen(url).read()
     soup = BeautifulSoup(html, 'html.parser')
     r_c = 0
@@ -11,3 +11,14 @@ def running_count(url):
         i = int(t)
         r_c = r_c + i
     return r_c
+
+def assignment2(url, rng, pos):
+    text = ""
+    u = url
+    for i in range(rng):
+        h = urllib.request.urlopen(u).read()
+        soup2 = BeautifulSoup(h, 'html.parser')
+        tag = soup2('a')
+        text = tag[pos].text
+        u = tag[pos].get('href', None)
+    return text
