@@ -1,5 +1,7 @@
 import unittest
-from corsera_python.module3.SumSocketAssignment import assignment1, assignment2
+from unittest.mock import MagicMock
+from corsera_python.module3.SocketAssignment import assignment1
+
 
 def get_file_path(fn):
     import os
@@ -16,27 +18,33 @@ def get_file_contents(fn):
 
 def strip_cr_lf(s): return s.replace("\n", "").replace("\r", "")
 
-class SumAssignment(unittest.TestCase):
 
-    def test_given_sum(self):
-        r = assignment1('http://py4e-data.dr-chuck.net/comments_42.html')
-        print(r)
+class SumAssignmentTests(unittest.TestCase):
 
+    def test_mock_call(self):
+
+        known_html = get_file_contents('comments_42.html')
+
+        ulib_mock = MagicMock()
+        url = 'This is a nonsense url'
+        ulib_mock.request.urlopen(url).read.side_effect = [known_html]
+
+        actual_result = assignment1(ulib_mock, url)
+        self.assertEqual(2553, actual_result)
+
+
+    @unittest.skip('Skipped because this hits the internet')
+    def test_real_call(self):
+        import urllib
+        url = 'http://py4e-data.dr-chuck.net/comments_42.html'
+        actual_result = assignment1(urllib, url)
+        self.assertEqual(2553, actual_result)
+
+
+    @unittest.skip('Skipped because this hits the internet')
     def test_ending_in_23(self):
         w = assignment1('http://py4e-data.dr-chuck.net/comments_86513.html')
         print(w)
-
-    def test_fikret(self):
-        rng = 4
-        pos = 2
-        actual = assignment2('http://py4e-data.dr-chuck.net/known_by_Fikret.html', rng, pos)
-        print(actual)
-
-    def test_kristofer(self):
-        rng = 7
-        pos = 17
-        actual = assignment2('http://py4e-data.dr-chuck.net/known_by_Kristofer.html', rng, pos)
-        print(actual)
 
 
 
