@@ -1,9 +1,10 @@
 def calculate_farenheit(cel):
     farenheit = cel*(9/5) + 32
-    return farenheit
+    heit = round(farenheit, 3)
+    return heit
 
 
-def convert_cel():
+def convert_to_farenheit():
     while True:
         try:
             celsius = input('Enter celsius temp:')

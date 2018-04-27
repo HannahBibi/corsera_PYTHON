@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module1.hoursofpay import calculate_pay
+from coursera_python.module1.hoursofpay import calculate_pay
 
 class HoursofPay(unittest.TestCase):
 

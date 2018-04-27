@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from corsera_python.module3.SocketGETAssignment import mock_one
+from coursera_python.module3.SocketGETAssignment import mock_one
 
 class MockTests(unittest.TestCase):
 
