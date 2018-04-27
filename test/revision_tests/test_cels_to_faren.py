@@ -14,7 +14,7 @@ class ConvertTemp(unittest.TestCase):
         self.assertEqual(138.2, calculate_farenheit(59))
 
     def test_three_decimal_places(self):
-        self.assertEqual(157.0226, calculate_farenheit(69.457))
+        self.assertEqual(157.023, calculate_farenheit(69.457))
 
 
 if __name__ == '  main  ':

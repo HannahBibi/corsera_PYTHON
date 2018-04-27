@@ -1,9 +1,10 @@
 def calculate_celsius(faren):
     cels = (faren - 32) * 5/9
-    return cels
+    decimal_value = round(cels, 3)
+    return decimal_value
 
 
-def convert_to_farenheit():
+def convert_to_celsius():
     while True:
         try:
             temp = input('Enter farenheit temp:')
@@ -11,6 +12,6 @@ def convert_to_farenheit():
                 break
             faren = float(temp)
             c = calculate_celsius(faren)
-            print(str(c) + '°C')
+            print(c + '°C')
         except:
             print('Invalid input entered.')
