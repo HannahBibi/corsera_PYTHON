@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from corsera_python.module3.SocketAssignment import assignment2
+from coursera_python.module3.SocketAssignment import assignment2
 
 
 def get_file_path(fn):

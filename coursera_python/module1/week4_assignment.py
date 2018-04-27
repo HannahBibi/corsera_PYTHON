@@ -1,4 +1,4 @@
-from corsera_python.module1.hoursofpay import calculate_pay
+from coursera_python.module1.hoursofpay import calculate_pay
 
 
 hours_worked = input("Enter Hours:")

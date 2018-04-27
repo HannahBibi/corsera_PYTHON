@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.other.PythonSum import sum
+from coursera_python.other.PythonSum import sum
 
 class PythonSum(unittest.TestCase):
 

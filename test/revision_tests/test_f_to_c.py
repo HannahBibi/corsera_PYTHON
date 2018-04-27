@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.revision.convert_faren_to_cels import calculate_celsius
+from coursera_python.revision.convert_faren_to_cels import calculate_celsius
 
 
 class ConvertTemp(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module2.assignment13 import count_mail
+from coursera_python.module2.assignment13 import count_mail
 
 
 def get_file_path(fn):

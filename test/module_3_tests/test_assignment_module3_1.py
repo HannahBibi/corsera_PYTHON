@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module3.module_three_assignment1 import extract_sum
+from coursera_python.module3.module_three_assignment1 import extract_sum
 
 
 def get_file_path(fn):

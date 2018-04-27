@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.other.PythonMultiple import multiply_list_items
+from coursera_python.other.PythonMultiple import multiply_list_items
 
 
 class PythonMultiple(unittest.TestCase):

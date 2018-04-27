@@ -3,7 +3,7 @@ def calculate_celsius(faren):
     return cels
 
 
-def convert_faren():
+def convert_to_farenheit():
     while True:
         try:
             temp = input('Enter farenheit temp:')

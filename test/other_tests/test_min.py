@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.other.PythonMin import minimum
+from coursera_python.other.PythonMin import minimum
 
 
 class PythonMin(unittest.TestCase):

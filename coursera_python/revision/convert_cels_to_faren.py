@@ -3,7 +3,7 @@ def calculate_farenheit(cel):
     return farenheit
 
 
-def convert_cel():
+def convert_to_celsius():
     while True:
         try:
             celsius = input('Enter celsius temp:')

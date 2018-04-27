@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.module2.assignment14 import count_time_stamp
+from coursera_python.module2.assignment14 import count_time_stamp
 
 
 def get_file_path(fn):

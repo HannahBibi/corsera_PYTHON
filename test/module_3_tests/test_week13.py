@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from corsera_python.module3.module_three_assignment5 import crawl_data
+from coursera_python.module3.module_three_assignment5 import crawl_data
 
 
 def get_file_path(fn):
