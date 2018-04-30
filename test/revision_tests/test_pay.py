@@ -35,19 +35,19 @@ class CalculateNormalPay(unittest.TestCase):
 class CalculateOvertimePay(unittest.TestCase):
 
     def test_with_fourty_five(self):
-        self.assertEqual(475.0, overtime_pay(400, 45, 40, 10, 1.5))
+        self.assertEqual(475.0, overtime_pay(400, 45, 10))
 
     def test_with_zero(self):
-        self.assertEqual(0, overtime_pay(0, 0, 0, 0, 0))
+        self.assertEqual(0, overtime_pay(0, 0, 0))
 
     def test_with_minus_rate(self):
-        self.assertEqual(340.0, overtime_pay(400, 45, 40, -8, 1.5))
+        self.assertEqual(340.0, overtime_pay(400, 45, -8))
 
     def test_with_zero_hours(self):
-        self.assertEqual(0, overtime_pay(0, 0, 0, 10, 1.5))
+        self.assertEqual(-600.0, overtime_pay(0, 0, 10))
 
     def test_with_less_than_fourty_five(self):
-        self.assertEqual(220.0, overtime_pay(400, 0, 12, 10, 1.5))
+        self.assertEqual(-200.0, overtime_pay(400, 0, 10))
 
 
 if __name__ == '  main  ':

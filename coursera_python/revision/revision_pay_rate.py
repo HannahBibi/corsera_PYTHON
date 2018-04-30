@@ -2,15 +2,11 @@ def normal_pay(hours_worked, rate_of_pay):
     if hours_worked > 40:
         return 40 * rate_of_pay
     else:
-        total = hours_worked * rate_of_pay
-    return total
+        return hours_worked * rate_of_pay
 
 
-def overtime_pay(normal_hours_pay, overtime_hours, hours_worked, rate_of_pay, overtime_extra):
-    overtime_hrs = overtime_hours - hours_worked
-    overtime_rate = rate_of_pay * overtime_extra
+def overtime_pay(normal_hrs, overtime_hrs, rate_of_pay):
+    overtime_hrs = overtime_hrs - 40
+    overtime_rate = rate_of_pay * 1.5
     total_overtime_pay = overtime_hrs * overtime_rate
-    total = total_overtime_pay + normal_hours_pay
-    return total
-
-
+    return total_overtime_pay + normal_hrs
