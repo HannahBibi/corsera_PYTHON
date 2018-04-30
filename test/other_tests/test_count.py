@@ -1,5 +1,5 @@
 import unittest
-from corsera_python.other.PythonCount import count
+from coursera_python.other.PythonCount import count
 
 class PythonCount(unittest.TestCase):
 

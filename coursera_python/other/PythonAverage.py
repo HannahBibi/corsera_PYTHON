@@ -1,5 +1,5 @@
-from corsera_python.other.PythonSum import sum
-from corsera_python.other.PythonCount import count
+from coursera_python.other.PythonSum import sum
+from coursera_python.other.PythonCount import count
 
 def avg (l):
     curr_sum = 0
