@@ -8,10 +8,10 @@ class CalculateNormalPay(unittest.TestCase):
         self.assertEqual(400, normal_pay(40, 10))
 
     def test_with_minus_hours(self):
-        self.assertEqual(-400, normal_pay(-40, 10))
+        self.assertEqual(0, normal_pay(-40, 10))
 
     def test_with_minus_rate(self):
-        self.assertEqual(-400, normal_pay(40, -10))
+        self.assertEqual(0, normal_pay(40, -10))
 
     def test_with_zero_hours(self):
         self.assertEqual(0, normal_pay(0, 10))
@@ -41,7 +41,7 @@ class CalculateOvertimePay(unittest.TestCase):
         self.assertEqual(0, overtime_pay(0, 0))
 
     def test_with_minus_rate(self):
-        self.assertEqual(-60.0, overtime_pay(45, -8))
+        self.assertEqual(0, overtime_pay(45, -8))
 
     def test_with_zero_hours(self):
         self.assertEqual(0, overtime_pay(0, 10))
@@ -49,8 +49,11 @@ class CalculateOvertimePay(unittest.TestCase):
     def test_with_less_than_fourty_five(self):
         self.assertEqual(0, overtime_pay(24, 10))
 
+    def test_with_minus_hours(self):
+        self.assertEqual(0, overtime_pay(-12, 10))
 
-class ClassTotalPay(unittest.TestCase):
+
+class TotalPay(unittest.TestCase):
 
     def test_with_fourty_five(self):
         self.assertEqual(475.0, total_pay(45, 10))
@@ -59,10 +62,10 @@ class ClassTotalPay(unittest.TestCase):
         self.assertEqual(0, total_pay(0, 0))
 
     def test_with_minus_hours(self):
-        self.assertEqual(-450, total_pay(-45, 10))
+        self.assertEqual(0, total_pay(-45, 10))
 
     def test_with_minus_rate(self):
-        self.assertEqual(-475.0, total_pay(45, -10))
+        self.assertEqual(0, total_pay(45, -10))
 
     def test_with_less_than_fourty_five(self):
         self.assertEqual(240, total_pay(24, 10))
