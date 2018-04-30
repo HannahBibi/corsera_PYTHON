@@ -2,7 +2,7 @@ import unittest
 from coursera_python.revision.revision_pay_rate import normal_pay, overtime_pay, total_pay
 
 
-class CalculateNormalPay(unittest.TestCase):
+class CalculateNormalPayTests(unittest.TestCase):
 
     def test_with_no_overtime(self):
         self.assertEqual(400, normal_pay(hours_worked=40, rate_of_pay=10))
@@ -32,7 +32,7 @@ class CalculateNormalPay(unittest.TestCase):
         self.assertEqual(376.0, normal_pay(hours_worked=89, rate_of_pay=9.4))
 
 
-class CalculateOvertimePay(unittest.TestCase):
+class CalculateOvertimePayTests(unittest.TestCase):
 
     def test_with_fourty_five(self):
         self.assertEqual(75.0, overtime_pay(hours_worked=45, rate_of_pay=10))
@@ -53,7 +53,7 @@ class CalculateOvertimePay(unittest.TestCase):
         self.assertEqual(0, overtime_pay(hours_worked= -12, rate_of_pay=10))
 
 
-class TotalPay(unittest.TestCase):
+class TotalPayTests(unittest.TestCase):
 
     def test_with_fourty_five(self):
         self.assertEqual(475.0, total_pay(hours_worked=45, rate_of_pay=10))
