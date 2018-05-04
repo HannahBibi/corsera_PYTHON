@@ -2,12 +2,11 @@ import re
 
 try:
     file_handle = open('Macbeth.txt')
-except:
+    s = file_handle.read().upper()
+finally:
     print('File cannot be opened.')
     file_handle.close()
 
-s = file_handle.read().upper()
-file_handle.close()
 
 longest_word = None
 
