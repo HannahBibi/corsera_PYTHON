@@ -19,7 +19,7 @@ except:
 print(json.dumps(js, indent=2))
 
 r_list = js["results"]
-first_in_list= r_list[0]
+first_in_list = r_list[0]
 place_id = first_in_list['place_id']
 
 print(place_id)

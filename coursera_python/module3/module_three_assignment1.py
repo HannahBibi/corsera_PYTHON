@@ -1,4 +1,6 @@
 import re
+
+
 def extract_sum(filename):
     file_handle = open(filename)
     count_sum = 0
