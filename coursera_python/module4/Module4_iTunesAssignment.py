@@ -1,8 +1,8 @@
 import xml.etree.ElementTree as ET
 import sqlite3
 
-db_connect = sqlite3.connect('trackdb.sqlite')
-cursor = db_connect.cursor()
+db_connection = sqlite3.connect('trackdb.sqlite')
+cursor = db_connection.cursor()
 
 cursor.executescript('''
 DROP TABLE IF EXISTS Artist;
@@ -92,4 +92,4 @@ for entry in entries:
         VALUES ( ?, ?, ?, ?, ?, ? )''',
         (name, album_id, length, rating, play_count, genre_id))
 
-    db_connect.commit()
+    db_connection.commit()
